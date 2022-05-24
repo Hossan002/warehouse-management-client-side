@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({ product }) => {
-    const { name, des, img, quantity, price, supplier } = product;
+    const { name, description, image, quantity, price, supplier } = product;
     const navigate = useNavigate();
 
     const manageNavigate = id => {
@@ -13,11 +13,11 @@ const Product = ({ product }) => {
     return (
         <div className="g-5 col-sm-12 col-md-6 col-lg-3">
             <Card style={{ width: '18rem' }} className='product-card py-2 h-100'>
-                <Card.Img variant="top" src={img} />
+                <Card.Img variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title><hr></hr>
                     <Card.Text>
-                        {des}
+                        {description}
                     </Card.Text>
                     <Card.Text>
                         <h5>Quantity: {quantity}</h5>

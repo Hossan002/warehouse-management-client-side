@@ -15,7 +15,7 @@ const AddedItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user?.email;
-            const url = `https://laptopstorebd.herokuapp.com/item?email=${email}`;
+            const url = `https://ancient-brook-98256.herokuapp.com/item?email=${email}`;
             const { data } = await axios.get(url, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

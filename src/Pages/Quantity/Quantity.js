@@ -14,7 +14,7 @@ const Quantity = () => {
 
         const updateRestock = { quantity };
         // console.log(updateRestock);
-        const url = `https://laptopstorebd.herokuapp.com/update/${id}`;
+        const url = `https://ancient-brook-98256.herokuapp.com/update/${id}`;
         console.log(url);
         fetch(url, {
             method: 'PUT',
@@ -41,7 +41,7 @@ const Quantity = () => {
         const quantity = e.target.quantity.value - 1;
         const updateQuantity = { quantity }
         console.log(updateQuantity);
-        const url = `https://laptopstorebd.herokuapp.com/update/${id}`;
+        const url = `https://ancient-brook-98256.herokuapp.com/update/${id}`;
         fetch(url, {
             method: 'PUT',
             body: JSON.stringify(

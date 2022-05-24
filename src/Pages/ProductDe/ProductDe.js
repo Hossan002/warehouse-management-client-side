@@ -12,7 +12,7 @@ import auth from '../../Firebase/firebase.init';
 const ProductDe = ({ product }) => {
     const [user] = useAuthState(auth);
     // console.log(user);
-    const { name, img, quantity, supplier, price } = product;
+    const { name, image, quantity, supplier, price } = product;
     const navigate = useNavigate();
     const edit = id => {
         navigate(`/editProduct/${id}`);
@@ -31,7 +31,7 @@ const ProductDe = ({ product }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure delete this product?');
         if (proceed) {
-            const url = `https://laptopstorebd.herokuapp.com/delete/${id}`;
+            const url = `https://ancient-brook-98256.herokuapp.com/delete/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -51,7 +51,7 @@ const ProductDe = ({ product }) => {
             <td>{name}</td>
             <td>{quantity}</td>
             <td>
-                <img className='border rounded-circle custom-size' src={img} alt="" />
+                <img className='border rounded-circle custom-size' src={image} alt="" />
             </td>
             <td>{price} $</td>
             <td>{supplier}</td>

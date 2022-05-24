@@ -28,7 +28,7 @@ const EditProduct = () => {
         const price = event.target.price.value;
 
         //     console.log(name, img, des, quantity, supplier, price);
-        const url = `https://laptopstorebd.herokuapp.com/update/${id}`
+        const url = `https://ancient-brook-98256.herokuapp.com/update/${id}`
         console.log(url);
         console.log(url);
         fetch(url, {

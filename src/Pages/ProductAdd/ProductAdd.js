@@ -22,7 +22,7 @@ const ProductAdd = () => {
         const supplier = event.target.supplier.value;
         const price = event.target.price.value;
         const item = { email, name, img, des, quantity, supplier, price };
-        const url = `https://laptopstorebd.herokuapp.com/productAdd`;
+        const url = `https://ancient-brook-98256.herokuapp.com/productAdd`;
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
@@ -34,7 +34,7 @@ const ProductAdd = () => {
         })
             .then((response) => response.json())
             .then((data) => setProduct(data));
-        const urlItem = 'https://laptopstorebd.herokuapp.com/item';
+        const urlItem = 'https://ancient-brook-98256.herokuapp.com/item';
         axios.post(urlItem, item)
             .then(response => {
                 console.log(response);

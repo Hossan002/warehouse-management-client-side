@@ -15,7 +15,7 @@ const ProductDetail = () => {
         const newQuantity = product.quantity - 1;
         const count = { newQuantity }
 
-        fetch(`https://laptopstorebd.herokuapp.com/update/${id}`, {
+        fetch(`https://ancient-brook-98256.herokuapp.com/update/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 count
